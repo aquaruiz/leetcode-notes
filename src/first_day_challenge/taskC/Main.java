@@ -1,5 +1,7 @@
 package first_day_challenge.taskC;
 
+import com.sun.java.swing.plaf.windows.WindowsTabbedPaneUI;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,7 +10,9 @@ import java.util.stream.Collectors;
 public class Main {
 
 	public static void main(String[] args) {
-		List<Integer> result = getMinimumUniqueSum(List.of("24 24"));
+		List<String> input = new ArrayList<>();
+		input.add("24 24");
+		List<Integer> result = getMinimumUniqueSum(input);
 		result.forEach(System.out::println);
 //		System.out.print(result);
 	}

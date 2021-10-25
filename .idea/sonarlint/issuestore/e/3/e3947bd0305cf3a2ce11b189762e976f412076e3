@@ -1,0 +1,11 @@
+
+S	java:S106	"9Replace this use of System.out or System.err by a logger.(®ıáëûÿÿÿÿ
+Q	java:S125
+"<This block of commented-out lines of code should be removed.(ŠÓÃÄ
+Q	java:S125 "<This block of commented-out lines of code should be removed.(Åö—
+o
+java:S2293/"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÖÃ³Ø
+y
+java:S1488"^Immediately return this expression instead of assigning it to the temporary variable "result".(Êœô§ùÿÿÿÿ
+]
+java:S2259"BA "NullPointerException" could be thrown; "tail" is nullable here.(“İ¡şÿÿÿÿ

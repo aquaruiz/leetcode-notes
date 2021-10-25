@@ -1,5 +1,6 @@
 package first_day_challenge;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -19,9 +20,14 @@ public class Main {
 //				.collect(Collectors.toList());
 
 		int count = 1;
-		List<Integer> inputArray = List.of(0, 1, 0, 0, 1, 0);
+		List<Integer> inputArray = new ArrayList<>();
+		inputArray.add(0);
+		inputArray.add(1);
+		inputArray.add(0);
+		inputArray.add(0);
+		inputArray.add(1);
+		inputArray.add(0);
 		int longestOnesSequence = longestOnesSequence(count, inputArray);
-
 
 		System.out.println(longestOnesSequence);
 	}

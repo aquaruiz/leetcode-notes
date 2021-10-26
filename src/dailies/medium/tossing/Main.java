@@ -1,4 +1,4 @@
-package dailies.medium;
+package dailies.medium.tossing;
 
 public class Main {
 

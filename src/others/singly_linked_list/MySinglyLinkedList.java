@@ -1,16 +1,26 @@
-package data_structures.linked_list;
+package others.singly_linked_list;
 
-public class MyLinkedList {
+public class MySinglyLinkedList {
+
+	class Node {
+
+		int val;
+		Node next;
+
+		public Node(int val) {
+			this.val = val;
+		}
+	}
+
 	Node head;
 	int capacity;
 
-	public MyLinkedList() {
-
+	public MySinglyLinkedList() {
 	}
 
 	/** Get the value of the index-th node in the linked list. If the index is invalid, return -1. */
 	public int get(int index) {
-		if (index == 0 || index > capacity) {
+		if (index < 0 || index > capacity) {
 			return -1;
 		}
 
@@ -55,26 +65,31 @@ public class MyLinkedList {
 		Node temp = currentNode.next;
 		currentNode.next = new Node(val);
 		currentNode.next.next = temp;
-			capacity++;
+		capacity++;
 	}
 
 	/** Delete the index-th node in the linked list, if the index is valid. */
 	public void deleteAtIndex(int index) {
+		if (get(index) == -1 || index > capacity) {
+			return;
+		}
 
-		// todo make it work
+		if (index == 0){
+			head = head.next;
+			return;
+		}
+
+		capacity--;
+
 		Node currentNode = head;
-		while(currentNode.next != null && index > 2) {
+
+		while(currentNode.next != null && index > 1) {
 			currentNode = currentNode.next;
 			index--;
 		}
 
-		if (currentNode.next != null) {
-		currentNode.val = currentNode.next.val;
-		currentNode.next = currentNode.next.next;
-		} else {
-			currentNode = null;
-		}
-		capacity--;
+		Node toDelete = currentNode.next;
+		currentNode.next = toDelete.next;
 	}
 
 	@Override
